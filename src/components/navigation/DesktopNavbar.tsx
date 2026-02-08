@@ -10,7 +10,7 @@ export const DesktopNavbar = ({ user, onLogout }: Props) => {
     const filteredItems = NAV_ITEMS.filter(item => item.roles.includes(user.role));
 
     return (
-        <nav className="hidden md:flex items-center justify-between px-8 py-3 bg-white border-b sticky top-0 z-50">
+        <nav className="hidden md:flex items-center justify-between px-20 py-3 bg-white border-b sticky top-0 z-50 backdrop-blur-md">
             <div className="flex items-center gap-10">
                 <Link to="/" className="flex items-center gap-2">
                     <div className="bg-emerald-600 p-1.5 rounded-lg text-white font-bold text-sm">SP</div>
