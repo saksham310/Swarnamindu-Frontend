@@ -6,6 +6,7 @@ import { ScreeningForm } from '../components/screening/ScreeningForm';
 import { screeningSchema, type ScreeningFormData } from '../schemas/screening.schema';
 import { useParams } from 'react-router-dom';
 import { useGetScreening } from '@/hooks/useGetScreening';
+import { PatientNotFound } from '@/components/screening/PatientNotFound';
 
 
 const ScreeningPage = () => {
@@ -34,7 +35,7 @@ const ScreeningPage = () => {
     };
 
     if (!id || !patient) {
-        return <div>Patient not found</div>;
+        return <PatientNotFound />;
     }
     return (
         <div className="max-w-7xl mx-auto p-4 md:p-8 space-y-6">
